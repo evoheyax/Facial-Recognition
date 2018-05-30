@@ -102,7 +102,7 @@ def crop_and_interpool_image(image):
                                      scaleFactor=1.1,
                                      minNeighbors=5,
                                      minSize=(30, 30),
-                                     flags = cv2.cv.CV_HAAR_SCALE_IMAGE
+                                     flags = cv2.CASCADE_SCALE_IMAGE
                                      )
 
     for (x, y, w, h) in faces:
@@ -136,7 +136,7 @@ def detect_three_faces(X, y, names_dict):
                                          scaleFactor=1.3,
                                          minNeighbors=5,
                                          minSize=(50, 50),
-                                         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
+                                         flags = cv2.CASCADE_SCALE_IMAGE
                                          )
         
     md_pca, X_proj = pca_X(X, n_comp = 50)
